@@ -1,0 +1,8 @@
+export const certificates = [
+  {issuer:'HackerRank',title:'SQL (Basic)',date:'June 16, 2026',type:'Certification',slug:'hackerrank-sql-basic',description:'Passed the HackerRank SQL (Basic) skill certification test.',credential:'A8A135230940'},
+  {issuer:'HackerRank',title:'Frontend Developer (React)',date:'June 16, 2026',type:'Certification',slug:'hackerrank-react',description:'Passed the HackerRank Frontend Developer (React) role certification test.',credential:'1267CA820DA8'},
+  {issuer:'ServiceNow',title:'Welcome to ServiceNow Micro-Certification',date:'January 2, 2026',type:'Micro-certification',slug:'servicenow',description:'Completed the certification requirements for Micro-Certification — Welcome to ServiceNow.'},
+  {issuer:'DeepLearning.AI / Coursera',title:'Natural Language Processing with Classification and Vector Spaces',date:'March 25, 2026',type:'Course certificate',slug:'deeplearning-nlp',description:'Completed the DeepLearning.AI online course offered through Coursera.',verification:'https://coursera.org/verify/X9AQ6BI28K9Z'},
+  {issuer:'Deloitte / Forage',title:'Data Analytics Job Simulation',date:'May 4, 2026',type:'Job simulation · not employment',slug:'deloitte-forage',description:'Completed practical tasks in data analysis and forensic technology through Forage. This is a job simulation, not employment at Deloitte.'},
+  {issuer:'ShadowFox',title:'UI/UX Design Virtual Internship',date:'January 2–31, 2026',type:'Virtual internship',slug:'shadowfox',description:'Completed a one-month virtual internship in UI/UX Design at ShadowFox, January 2–31, 2026.',credential:'SF01VIP202'},
+] as const;

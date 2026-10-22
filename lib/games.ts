@@ -1,0 +1,5 @@
+export function move2048(board:number[],direction:string){let score=0;const next=[...board];for(let i=0;i<4;i++){const indices=Array.from({length:4},(_,j)=>direction==='left'?i*4+j:direction==='right'?i*4+3-j:direction==='up'?j*4+i:(3-j)*4+i);const row=indices.map(k=>board[k]).filter(Boolean),merged:number[]=[];for(let j=0;j<row.length;j++){if(row[j]===row[j+1]){merged.push(row[j]*2);score+=row[j]*2;j++;}else merged.push(row[j]);}while(merged.length<4)merged.push(0);indices.forEach((k,j)=>next[k]=merged[j]);}return {board:next,score,changed:next.some((v,i)=>v!==board[i])};}
+
+const lines=[[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
+export function winner(b:string[]){for(const [a,c,d] of lines)if(b[a]&&b[a]===b[c]&&b[a]===b[d])return b[a];return b.every(Boolean)?'draw':null;}
+export function minimax(b:string[],player:string):number{const w=winner(b);if(w)return w==='O'?10:w==='X'?-10:0;const scores=b.flatMap((v,i)=>{if(v)return[];const next=[...b];next[i]=player;return [minimax(next,player==='O'?'X':'O')];});return player==='O'?Math.max(...scores):Math.min(...scores);}
