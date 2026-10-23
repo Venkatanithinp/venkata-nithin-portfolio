@@ -46,7 +46,7 @@ D1 schema and generated migrations are committed under `db/` and `drizzle/`. The
 - TypeScript and the Worker production build.
 - Camera/display intersection, keyboard clearance, and continuous camera path.
 - Pairwise key spacing, 2048 single-merge rules, and minimax draw behavior.
-- Server route integration using real in-memory SQLite and an R2 contract adapter: authorization, same-origin enforcement, validation, rate limits, contact persistence, moderation, PDF upload, private preview, publication, and download.
+- Server route integration using real in-memory SQLite: same-origin enforcement, validation, rate limits, contact persistence, and feedback moderation.
 - Browser checks of centered portal layout, navigation, experiments, and responsive layouts.
 
 The managed browser disables WebGL. GPU appearance, laptop fidelity, camera choreography as perceived on physical devices, and real-device Core Web Vitals remain unverified. The model is custom reference-based geometry, not manufacturer CAD. No absolute guarantee of zero errors or photorealistic fidelity is made.
