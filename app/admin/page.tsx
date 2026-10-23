@@ -1,3 +1,3 @@
-import AdminPanel from '@/components/AdminPanel';
-export const metadata={title:'Private Admin — Venkata Nithin',robots:{index:false,follow:false}};
-export default function Admin(){return <AdminPanel/>;}
+import {redirect} from 'next/navigation';
+export const metadata={title:'Portfolio — Venkata Nithin'};
+export default function Admin(){redirect('/');}
