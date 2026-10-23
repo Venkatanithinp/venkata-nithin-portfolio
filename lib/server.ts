@@ -6,7 +6,7 @@ export const admin=authenticated;
 export function sameOrigin(request:Request){return request.headers.get('origin')===new URL(request.url).origin;}
 export async function rate(request:Request,scope:string,max=5){
  const {DB}=bindings();if(!DB)throw new Error('Storage unavailable');
- const id=request.headers.get('oai-authenticated-user-id')??request.headers.get('cf-connecting-ip')??'anonymous';
+ const id=request.headers.get('cf-connecting-ip')??'anonymous';
  const hash=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(id)))).map(v=>v.toString(16).padStart(2,'0')).join('');
  const now=Date.now(),key=scope+':'+hash+':'+Math.floor(now/60000);
  await DB.prepare('DELETE FROM limits WHERE expires < ?').bind(now).run();
